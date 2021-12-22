@@ -86,7 +86,7 @@ function ShowMenu(element, index, array)
 
 function FindInputException(input)
 {
-	if(input.length == 0) return 1;
+	if(input.length <= 1) return 1;
 	if(input.length % 2 == 0) return 2;
 	if(input.length != [...new Set(input)].length) return 3;
 	return 0;
@@ -96,7 +96,7 @@ function ShowExceptionMessage(input)
 {
 	switch (FindInputException(input)) {
 		case 1:
-		 return "Enter the names of the moves. They must not be repeated and the number must be odd.\nExample: 1 2 3";
+		 return "Enter the names of the moves. They must not be repeated and the number must be odd(beggining from 3).\nExample: 1 2 3";
 		 break;
 		case 2:
 		 return "Invalid input. The number of moves must be odd.\nExample: 1 2 3 4 5";
