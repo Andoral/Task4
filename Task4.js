@@ -94,7 +94,7 @@ function FindInputException(input)
 
 function ShowExceptionMessage(input)
 {
-	switch (FindException(input)) {
+	switch (FindInputException(input)) {
 		case 1:
 		 return "Enter the names of the moves. They must not be repeated and the number must be odd.\nExample: 1 2 3";
 		 break;
